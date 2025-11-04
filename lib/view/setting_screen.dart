@@ -1,5 +1,6 @@
 import 'package:expense_snap/resources/customButton/buttom_nav.dart';
 import 'package:flutter/material.dart';
+
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
 
@@ -11,15 +12,22 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text('Setting'),
-        ],
+      appBar: AppBar(
+        title: const Text("Settings"),
+        centerTitle: true,
       ),
-      bottomNavigationBar: CustomNavigationBar(selectIndex: 3, onItemSelect: (int value){})
+      body: const Center(
+        child: Text(
+          'Setting',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+      ),
+      bottomNavigationBar: CustomNavigationBar(
+        selectIndex: 3,
+        onItemSelect: (int value) {
+          // handle navigation tap
+        },
+      ),
     );
-
   }
 }

@@ -35,9 +35,9 @@ class CustomNavigationBar extends StatelessWidget {
           case 1:
             Get.off(() => AddTransactionView());
           case 2:
-            Get.off(() => SettingScreen());
-          case 3:
             Get.off(()=>AnalyticsScreen());
+          case 3:
+            Get.off(() => SettingScreen());
             break;
         }
       },
